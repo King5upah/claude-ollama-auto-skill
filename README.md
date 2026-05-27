@@ -2,7 +2,20 @@
 
 A Claude Code skill that automatically delegates cheap text tasks to local [Ollama](https://ollama.com) (Mistral), saving Claude tokens for complex reasoning.
 
-Includes an **audit mode** to track whether Ollama is actually helping over time.
+**No MCP server. No plugins. Pure CLI** — Claude calls Ollama directly via `curl` from the terminal. Zero infrastructure overhead.
+
+Includes an **audit mode** to track whether Ollama is actually helping over time — something no similar project does.
+
+---
+
+## Why not MCP?
+
+Most Ollama+Claude integrations require setting up an MCP server. This skill skips all that:
+
+- Claude calls `http://localhost:11434` directly via `curl` in Bash
+- No server process to manage
+- No config files
+- Works anywhere Ollama is running
 
 ---
 
